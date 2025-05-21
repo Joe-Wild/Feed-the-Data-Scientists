@@ -4,19 +4,20 @@ FEED THE DATA SCIENTISTS
 
 JOE WILD
 
+Objective of the Architecture
+This architecture aims to collect and analyze opinions or sentiments in response to specific topics or events, such as public reactions to a presidential decision or the general sentiment toward a film release. The system leverages a machine learning model from Hugging Face, a French startup, implemented in Visual Studio Code. The model is containerized using a Dockerfile and deployed in the cloud via AWS ECS Fargate.
 
-The goal of this architecture is to create a collector of opinions or feelings in response to specific subjects.
-For example, it may involve collecting reactions to a Presidential decision such as the general opinion on the release of a film. The code coming from “Hugging” Face (French Start-up) is established in Vscode and its image in a Docker Container (via Docker file) runs in the cloud using the AWS ECS fargate service.
-Thanks to the API given from “X application” we should be able to select the data (responses to a post) to analyse (such as positive_negative_or neutral) with the Hugging codes model, to store them in Aws S3 and then, process in a third time to a sorting with Databricks (for future investigations).
-For what? For the study of actions and their reactions. For knowledges. For learning.
+Using the API provided by the X application, the system extracts relevant data (e.g., responses to a post) and analyzes sentiments (positive, negative, or neutral) with the Hugging Face model. The processed data is stored in AWS S3 for persistence. Subsequently, Databricks is used for advanced sorting and analysis to support future investigations. 
 
-To avoid repeating the same mistakes in the future for example:
-
-All this architecture is orchestrated with Terraform, all the files needed are in the compressed .rar folder.
-I hope I have been as clear as possible in the explanation and purpose of this instrument, especially in the slides of the development phase.
+The purpose of this architecture is to study actions and their corresponding reactions, fostering knowledge and learning. By analyzing sentiments, we aim to understand public responses to avoid repeating past mistakes and inform decision-making.
+The entire infrastructure is orchestrated using Terraform, with all necessary configuration files included in the provided compressed .rar folder. I hope this explanation, along with the slides from the development phase, clearly conveys the instrument’s purpose and functionality.
 
 Research:
+
 https://huggingface.co/blog/sentiment-analysis-python
+
 https://arxiv.org/abs/2106.09462
-httpsdoi.org10.1609aaai.v34i01.5460
+
+https://doi.org10.1609aaai.v34i01.5460
+
 https://github.com/osome-iu/botometer-python?tab=readme-ov-file#dependencies
